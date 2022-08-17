@@ -1,5 +1,6 @@
 const jwt = require('jsonwebtoken')
-const authConfig = require("../../config/auth.json")
+
+require('dotenv').config()
 
 module.exports = (req, res, next) => {
     const authHeader = req.headers.authorization;
@@ -8,7 +9,6 @@ module.exports = (req, res, next) => {
         return res.status(401).send({ error: 'No token provided' })
     }
 
-    // Bearer hash muito louco
     const parts = authHeader.split(' ');
 
     if(!parts.length === 2) {
@@ -20,7 +20,7 @@ module.exports = (req, res, next) => {
         return res.status(401).send({ error: 'Token malformated' });
     }
 
-    jwt.verify(token, authConfig.secret, (err, decoded) => {
+    jwt.verify(token, process.env.SECRET, (err, decoded) => {
         if(err) {
             return res.status(401).send({ error: 'Invalid Token' })
         }

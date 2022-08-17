@@ -2,7 +2,12 @@ const path = require("path")
 const nodemailer = require("nodemailer");
 const hbs = require('nodemailer-express-handlebars');
 
-const { host, port, user, pass } = require('../config/mail.json')
+require('dotenv').config()
+
+const host = process.env.MAILER_HOST;
+const port = process.env.MAILER_PORT;
+const user = process.env.MAILER_USER;
+const pass = process.env.MAILER_PASS;
 
 var transport = nodemailer.createTransport({
     host,
