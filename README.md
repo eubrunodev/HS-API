@@ -8,4 +8,8 @@ Rest Api desenvolvida para um projeto Mobile. 📱
 
 ## Em breve..
 
+<<<<<<< HEAD
 ➕ Adicionar um design para a mensagem do email.
+=======
+➕ Adicionar um design para a mensagem do email.
+>>>>>>> c643cdca0010590977a168bdefcce184221d1bc7

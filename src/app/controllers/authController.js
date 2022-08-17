@@ -82,7 +82,7 @@ router.post('/forgot_password', async (req, res) => {
 
         mailer.sendMail({
             to: email,
-            from: 'diego@rocketseat.com.br',
+            from: 'hscompany@gmail.com',
             template: 'forgot_password',
             context: { token },
         }, (err) => {
