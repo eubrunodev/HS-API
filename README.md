@@ -1,10 +1,11 @@
-# Sobre a API
+# Sobre a API 💬
 
-Rest Api desenvolvida para um projeto Mobile.
+Rest Api desenvolvida para um projeto Mobile. 📱
 
-- Controle de Autenticação/Registro dos usuários.
-- Sistema de envio de email para resetar a senha.
+- ⚠️ | Controle de **Autenticação/Cadastro** dos usuários.
+
+- ♻️ | Sistema de **envio de email** para resetar a senha, caso o usuário esqueça. 
 
 ## Em breve..
 
-- Montar um design para a mensagem do email.
+➕ Adicionar um design para a mensagem do email.
