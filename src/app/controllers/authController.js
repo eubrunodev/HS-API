@@ -80,9 +80,10 @@ router.post('/forgot_password', async (req, res) => {
 
         mailer.sendMail({
             to: email,
-            from: 'hscompany@gmail.com',
+            from: 'glockhsnitro4@gmail.com',
             template: 'forgot_password',
-            context: { token },
+            subject: 'H$ystems - Recuperação de Senha',
+            context: { token, user },
         }, (err) => {
             if(err) {
                 res.status(400).send({error: 'Cannot send forgot password, try again'})
